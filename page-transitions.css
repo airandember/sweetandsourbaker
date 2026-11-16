@@ -1,0 +1,83 @@
+/* page-transitions.css · SavorSuite v0.0.8.5 (PROPOSED) · Tier 0 cross-page transitions · MOTION.md §11.1 · PATTERNS §Q. Clean-room.
+   Contract: CSS only; every page links this file; ≤300ms; transform/opacity only; exit shorter than entry, no overshoot, no ease-in;
+   reduced motion = plain load; browsers without cross-document view transitions = a 200ms content fade-in (section 6, needs
+   page-transitions-head.js) or a plain load without the script.
+   v0.0.8.5 rev 4 (Case 10 in Edge 156): the route crossfade runs on the standard curve cubic-bezier(0.4, 0, 0.2, 1), NOT the
+   strong ease-out of MOTION §2. A front-loaded ease-out is ~86% done by the first frame Edge presents (~80ms gap) and reads as a cut.
+   Tested: Chrome 156 and Edge 156 on Linux, headless (see RESULTS.md). Safari / Firefox: not tested. */
+
+/* 1. Opt in on EVERY page (same-origin, with no cross-origin redirect in between). Reduced motion never opts in (5l). */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+
+/* 2. Quiet Crossfade (default): old 240ms out, new 250ms in, both on the standard curve (rev 4). Combined opacity never drops
+   below .964 (old + new, plus-lighter; it was .903 at 200/250 ease-out) and the new page is 1% in at the first frame instead of 28%.
+   Do not shorten the exit below ~235ms on this curve: 220ms dips to .89. Total 250ms. */
+@keyframes savor-vt-out      { to   { opacity: 0; transform: translateY(-4px); } }
+@keyframes savor-vt-in       { from { opacity: 0; transform: translateY(8px);  } }
+@keyframes savor-vt-out-back { to   { opacity: 0; transform: translateY(4px);  } }
+@keyframes savor-vt-in-back  { from { opacity: 0; transform: translateY(-8px); } }
+@keyframes savor-vt-fade-out { to   { opacity: 0; } }
+@keyframes savor-vt-fade-in  { from { opacity: 0; } }
+::view-transition-old(root) { animation: 240ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)) both savor-vt-out; }
+::view-transition-new(root) { animation: 250ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)) both savor-vt-in; }
+/* Rev 4: the UA adds plus-lighter through its own animation list (-ua-mix-blend-mode-plus-lighter), and the `animation` shorthand
+   above REPLACES that list, so without this line old and new are blended source-over and identical pixels dip to ~75% coverage
+   mid-fade (measured on the held header: up to 53/255 luminance off; RESULTS.md Revision 4). Set it back explicitly. */
+::view-transition-old(root), ::view-transition-new(root),
+::view-transition-old(site-nav), ::view-transition-new(site-nav) { mix-blend-mode: plus-lighter; }
+/* Back / forward (type "back" is set by page-transitions-head.js on traverse): the slide runs the other way. */
+html:active-view-transition-type(back)::view-transition-old(root) { animation-name: savor-vt-out-back; }
+html:active-view-transition-type(back)::view-transition-new(root) { animation-name: savor-vt-in-back; }
+
+/* 3. Header stays still: lifted out of root, no drift. Rev 4: NOT display:none / animation:none — that swaps the old header for the
+   new one in a single frame, so anything that differs (current link, a logo that appears) pops. Instead the old and new header
+   crossfade on ONE clock (same 250ms, same curve, plus-lighter): pixels that are the same on both pages sum to exactly the same
+   pixel every frame and do not move; only what differs fades. */
+.site-nav { view-transition-name: site-nav; }
+::view-transition-group(site-nav) { animation-duration: 250ms; animation-timing-function: var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)); }
+::view-transition-old(site-nav) { animation: 250ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)) both savor-vt-fade-out; }
+::view-transition-new(site-nav) { animation: 250ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)) both savor-vt-fade-in; }
+/* 3a. Full-screen pages (no visible header): put <html data-fullscreen> on them. The header is not named there, and when only ONE
+   side has a named header it fades with the page instead of being held, so no ghost header hangs in or pops out. */
+html[data-fullscreen] .site-nav,
+html[data-fullscreen] .site-nav .nav-indicator,
+html[data-fullscreen] .site-nav [aria-current="page"]::after { view-transition-name: none; }   /* the hidden header's underline too */
+::view-transition-old(site-nav):only-child { animation: 240ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)) both savor-vt-out; }
+::view-transition-new(site-nav):only-child { animation: 250ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)) both savor-vt-in; }
+
+/* 4. Nav Glide (default): the current link's underline slides to the next link (250ms).
+   Markup: <span class="nav-indicator" aria-hidden="true"></span> inside the aria-current link.
+   Alternative, no extra markup (Chrome 156 verified, Safari unverified): name the ::after instead —
+     .site-nav [aria-current="page"]::after { view-transition-name: nav-indicator; }
+   Use ONE of the two, never both: a duplicate name skips the whole transition. */
+.site-nav .nav-indicator { view-transition-name: nav-indicator; }
+::view-transition-group(nav-indicator) { animation-duration: 250ms; animation-timing-function: var(--ease-drawer, cubic-bezier(0.32, 0.72, 0, 1)); }
+
+/* 5. Plate Lift (opt-in): list image grows into the detail hero (300ms, on-screen morph = ease-in-out, MOTION §2).
+   Only the DETAIL page's hero carries the name (<main data-detail>); a list page with its own hero is never named.
+   On the list, page-transitions-head.js names only the matching card, and only while it is in the viewport. */
+[data-detail] .page-hero__media { view-transition-name: hero-media; }
+::view-transition-group(hero-media) {
+  animation-duration: 300ms;
+  animation-timing-function: var(--ease-in-out, cubic-bezier(0.77, 0, 0.175, 1));
+  overflow: clip;                          /* keep the snapshots inside the morphing box */
+}
+/* Different aspect ratios (1:1 card -> 21:9 hero): fill the box and crop, never stretch or spill. */
+::view-transition-old(hero-media),
+::view-transition-new(hero-media) { height: 100%; object-fit: cover; }
+html.savor-enter [data-enter] { opacity: 0; }   /* Tier 1 only */
+
+/* 6. Fallback (rev 4) for browsers WITHOUT cross-document view transitions (Firefox today; older Safari / Chrome). Off where the
+   browser supports them (page-transitions-head.js never adds the class), off for reduced motion, off on reloads and on visits that
+   did not start from an in-site link. The page content (everything but the header and the skip link) fades in over 200ms, clocked
+   from the FIRST PAINTED FRAME (the script adds .savor-fb-in two frames after the class). Hidden at most ~300ms: if the script stalls
+   (hidden tab, long task), the CSS failsafe fades it in between 100ms and 300ms on its own. No exit fade: the old page stays put. */
+@media (prefers-reduced-motion: no-preference) {
+  html.savor-fb body > :not(.skip-link):not(:has(.site-nav)):not(.site-nav) {
+    opacity: 0; animation: savor-fb-failsafe 200ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)) 100ms forwards; }
+  html.savor-fb.savor-fb-in body > :not(.skip-link):not(:has(.site-nav)):not(.site-nav) {
+    opacity: 1; animation: none; transition: opacity 200ms var(--vt-ease, cubic-bezier(0.4, 0, 0.2, 1)); }
+}
+@keyframes savor-fb-failsafe { to { opacity: 1; } }

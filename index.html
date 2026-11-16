@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sweet & Sour · Homemade sourdough in Fort Saskatchewan, AB</title>
+<meta name="description" content="Sweet prices, homemade sourdough. Hand-scored loaves made by Tiana in Fort Saskatchewan, AB, with delivery and curbside pickup.">
+<meta name="theme-color" content="#110c09">
+<meta property="og:title" content="Sweet & Sour · Homemade sourdough in Fort Saskatchewan, AB">
+<meta property="og:description" content="Sweet prices, homemade sourdough. Hand-scored loaves made by Tiana in Fort Saskatchewan, AB, with delivery and curbside pickup.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preload" href="fonts/fraunces-var.woff2" as="font" type="font/woff2">
+<link rel="preload" href="fonts/instrument-sans-var.woff2" as="font" type="font/woff2">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="page-transitions.css">
+<script type="speculationrules">
+{"prerender":[{"where":{"and":[
+  {"href_matches":"/*"},
+  {"not":{"href_matches":["/*log-out*","/*logout*","/*sign-out*","/*signout*","/*unsubscribe*","/*add-to-cart*"]}},
+  {"not":{"href_matches":["{/*}?/login{.:ext}?{/*}?","{/*}?/log-in{.:ext}?{/*}?","{/*}?/signin{.:ext}?{/*}?","{/*}?/sign-in{.:ext}?{/*}?","{/*}?/signup{.:ext}?{/*}?","{/*}?/sign-up{.:ext}?{/*}?","{/*}?/register{.:ext}?{/*}?","{/*}?/auth{.:ext}?{/*}?","{/*}?/oauth{.:ext}?{/*}?","{/*}?/sso{.:ext}?{/*}?","{/*}?/account{.:ext}?{/*}?","{/*}?/accounts{.:ext}?{/*}?","{/*}?/my-account{.:ext}?{/*}?","{/*}?/portal{.:ext}?{/*}?","{/*}?/cart{.:ext}?{/*}?","{/*}?/basket{.:ext}?{/*}?","{/*}?/checkout{.:ext}?{/*}?","{/*}?/pay{.:ext}?{/*}?","{/*}?/payment{.:ext}?{/*}?","{/*}?/payments{.:ext}?{/*}?","{/*}?/billing{.:ext}?{/*}?","{/*}?/order{.:ext}?{/*}?","{/*}?/orders{.:ext}?{/*}?","{/*}?/:pre-login{.:ext}?{/*}?","{/*}?/:pre-log-in{.:ext}?{/*}?","{/*}?/:pre-signin{.:ext}?{/*}?","{/*}?/:pre-sign-in{.:ext}?{/*}?","{/*}?/:pre-portal{.:ext}?{/*}?"]}},
+  {"not":{"selector_matches":"a[href*='?'], a[download], a[target], [aria-current], [rel~=nofollow], [data-no-prerender], [data-no-transition]"}}
+]},"eagerness":"moderate"}]}
+</script>
+<script src="page-transitions-head.js"></script>
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/rain.js" defer></script>
+<script src="js/index.js" defer></script>
+</head>
+<body class="page-index">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main">
+    <a class="brand" href="index.html" data-no-prerender>Sweet <span class="brand__amp">&amp;</span> Sour</a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home<span class="nav-indicator" aria-hidden="true"></span></a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a class="btn btn--small" href="mailto:order@example.com" data-placeholder="order-email">Order</a>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+
+  <section id="h" class="hero" data-chapter="H" aria-labelledby="h-lead">
+    <div class="hero__stage" data-signature="depth-rain-canvas" data-tier="3">
+      <picture class="hero__room">
+        <source media="(min-width: 900px)" srcset="media/hero/index-hero-specimen-1.webp" width="1280" height="720">
+        <img class="hero__room-img" src="media/hero/ig-058-col.webp" width="640" height="960" alt="A leaf-scored sourdough boule in a single warm side light" decoding="async" fetchpriority="high">
+      </picture>
+      <picture class="hero__poster">
+        <source media="(min-width: 900px)" srcset="media/hero/rain-poster-1440.webp" width="1440" height="900">
+        <img src="media/hero/rain-poster-750.webp" width="750" height="1400" alt="" decoding="async">
+      </picture>
+      <canvas class="rain" aria-hidden="true"></canvas>
+      <div class="hero__light" aria-hidden="true"><span class="hero__spot"></span><span class="hero__grain"></span></div>
+      <div class="hero__copy wrap">
+        <p class="kicker hero__kicker">Homemade sourdough · Fort Saskatchewan, AB</p>
+        <h1 id="h-lead" class="hero__title" data-lead="H"><span class="line"><span class="line__in">Why helloooo,</span></span> <span class="line"><span class="line__in"><em>sourdough.</em></span></span></h1>
+        <p class="hero__lede">Sweet prices, homemade sourdough, made by Tiana in Fort Saskatchewan. Delivery or curbside pickup.</p>
+        <div class="hero__actions" data-cta="H">
+          <a class="btn" href="mailto:order@example.com" data-placeholder="order-email">Start an order</a>
+          <a class="btn btn--ghost" href="#s1">See the bread</a>
+        </div>
+        <button class="rain-pause" type="button" aria-pressed="false">Pause the rain</button>
+      </div>
+      <p class="scroll-cue" aria-hidden="true"><span>Scroll</span></p>
+    </div>
+    <ul class="rain-items" hidden aria-hidden="true">
+      <li data-rain-id="ig-007" data-plane="1" data-src="media/rain/ig-007.webp" data-full="media/rain/ig-007.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DeXF4G7j7Jt/" data-post-label="Instagram" data-alt="Leaf-scored round loaf, dark moody background, warm side light, flour dusted" data-w="1434" data-h="960"></li>
+      <li data-rain-id="ig-050" data-plane="2" data-src="media/rain/ig-050.webp" data-full="media/rain/ig-050.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DVmgGGoFeyS/" data-post-label="Instagram" data-alt="Four leaf-scored loaves on rack, warm backlit side light, dark background" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-086" data-plane="3" data-src="media/rain/ig-086.webp" data-full="media/rain/ig-086.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DNRUI7QiGR-/" data-post-label="Instagram" data-alt="Leaf-scored boule with dark houseplant leaves behind" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-020" data-plane="4" data-src="media/rain/ig-020.webp" data-full="media/rain/ig-020.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/Db6BW-8lGGh/" data-post-label="Instagram" data-alt="Leaf-scored boule beside second loaf on rack, grey backdrop" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-222" data-plane="5" data-src="media/rain/ig-222.webp" data-full="media/rain/ig-222.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DDlehBwRfJZ/?img_index=2" data-post-label="Instagram" data-alt="Star-scored golden loaf on dark rack" data-w="1440" data-h="1800"></li>
+      <li data-rain-id="ig-106" data-plane="1" data-src="media/rain/ig-106.webp" data-full="media/rain/ig-106.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DKXWxMeJ4fV/?img_index=2" data-post-label="Instagram" data-alt="Scored rustic boule with fern greenery" data-w="1440" data-h="958"></li>
+      <li data-rain-id="ig-072" data-plane="2" data-src="media/rain/ig-072.webp" data-full="media/rain/ig-072.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DQhUdiGE_9v/?img_index=2" data-post-label="Instagram" data-alt="Close crust of scored boule with flowers" data-w="1440" data-h="958"></li>
+      <li data-rain-id="ig-057" data-plane="3" data-src="media/rain/ig-057.webp" data-full="media/rain/ig-057.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DTx_vb4gPLl/" data-post-label="Instagram" data-alt="Close crust of golden loaves on rack" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-092" data-plane="4" data-src="media/rain/ig-092.webp" data-full="media/rain/ig-092.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DMqnYUWMFtf/" data-post-label="Instagram" data-alt="Two leaf-scored loaves on wire rack" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-191" data-plane="5" data-src="media/rain/ig-191.webp" data-full="media/rain/ig-191.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DE26kbCq3y5/" data-post-label="Instagram" data-alt="Mandala-scored loaf on dark wood board, black vase" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-224" data-plane="1" data-src="media/rain/ig-224.webp" data-full="media/rain/ig-224.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DDleb0Gx85G/?img_index=2" data-post-label="Instagram" data-alt="Star-scored loaves on racks, dark chocolate and golden" data-w="1440" data-h="1799"></li>
+      <li data-rain-id="ig-232" data-plane="2" data-src="media/rain/ig-232.webp" data-full="media/rain/ig-232.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DDldNNZx0jW/" data-post-label="Instagram" data-alt="Dark chocolate star-scored loaf on rack with red runner" data-w="1440" data-h="1800"></li>
+      <li data-rain-id="ig-012" data-plane="6" data-src="media/rain-far/ig-012-far.webp" data-full="media/full/ig-012.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DdkIXjMjUk-/" data-post-label="Instagram" data-alt="Overhead batch of scored loaves on multiple cooling racks" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-014" data-plane="7" data-src="media/rain-far/ig-014-far.webp" data-full="media/full/ig-014.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/Dc60xQ0Du4j/" data-post-label="Instagram" data-alt="Group of golden scored loaves on cooling rack, bright kitchen" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-043" data-plane="8" data-src="media/rain-far/ig-043-far.webp" data-full="media/full/ig-043.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DXryLaVlGjH/" data-post-label="Instagram" data-alt="Overhead cooling racks of leaf-scored loaves and rolls" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-026" data-plane="9" data-src="media/rain-far/ig-026-far.webp" data-full="media/full/ig-026.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/Daf5h20DFzu/" data-post-label="Instagram" data-alt="Close cluster of flour-scored loaves on rack" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-075" data-plane="10" data-src="media/rain-far/ig-075-far.webp" data-full="media/full/ig-075.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DP9POo8AbU7/" data-post-label="Instagram" data-alt="Overhead sunburst and mandala-scored loaf on rack, linen" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-101" data-plane="11" data-src="media/rain-far/ig-101-far.webp" data-full="media/full/ig-101.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DKr9Nzmtd7I/" data-post-label="Instagram" data-alt="Row of four mandala and leaf-scored loaves on rack with vase" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-117" data-plane="12" data-src="media/rain-far/ig-117-far.webp" data-full="media/full/ig-117.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DJZjs3VBsWi/" data-post-label="Instagram" data-alt="Two mandala-scored loaves on rack" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-141" data-plane="6" data-src="media/rain-far/ig-141-far.webp" data-full="media/full/ig-141.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DHCMhyMuw24/" data-post-label="Instagram" data-alt="Close-up two scored loaves on rack" data-w="1440" data-h="960"></li>
+      <li data-rain-id="ig-162" data-plane="7" data-src="media/rain-far/ig-162-far.webp" data-full="media/full/ig-162.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DGGl-iON30u/" data-post-label="Instagram" data-alt="Golden rustic loaves on wooden boards with striped vase" data-w="1440" data-h="959"></li>
+      <li data-rain-id="ig-204" data-plane="8" data-src="media/rain-far/ig-204-far.webp" data-full="media/full/ig-204.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DEi_IiDoRfZ/" data-post-label="Instagram" data-alt="Scored loaves on racks with beaded garland" data-w="1440" data-h="957"></li>
+      <li data-rain-id="ig-211" data-plane="9" data-src="media/rain-far/ig-211-far.webp" data-full="media/full/ig-211.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DEIYI90AGX4/?img_index=4" data-post-label="Instagram" data-alt="Star and snowflake-scored loaves on rack with greenery" data-w="1440" data-h="957"></li>
+      <li data-rain-id="ig-236" data-plane="10" data-src="media/rain-far/ig-236-far.webp" data-full="media/full/ig-236.webp" data-post="https://www.instagram.com/sweetandsour.baker/p/DDlcrzZRh2h/" data-post-label="Instagram" data-alt="Tray of star-scored loaves on racks in kitchen" data-w="1440" data-h="1800"></li>
+    </ul>
+    <dialog class="rain-lightbox" aria-label="Photo"><img alt=""><a class="rain-lightbox__post" target="_blank" rel="noopener"></a><button class="rain-lightbox__close" type="button">Close</button></dialog>
+  </section>
+
+  <section id="s1" class="scored" data-chapter="S1" aria-labelledby="s1-lead">
+    <div class="scored__pin">
+      <div class="scored__inner wrap">
+        <div class="scored__text">
+          <p class="kicker">Scored by hand</p>
+          <h2 id="s1-lead" class="scored__title" data-lead="S1"><span class="line"><span class="line__in">Every loaf,</span></span> <span class="line"><span class="line__in">scored by hand.</span></span></h2>
+          <p class="scored__lede">Each pattern is cut into the dough by hand, just before it goes in the oven. No two come out quite the same.</p>
+          <ol class="scored__names" aria-label="Scoring patterns">
+            <li data-name="0">Leaf</li><li data-name="1">Mandala</li><li data-name="2">Star</li>
+          </ol>
+        </div>
+        <div class="scored__stage" data-signature="relight-mask" data-tier="3">
+        <figure class="loaf loaf--leaf" data-loaf="0">
+          <div class="loaf__plate">
+            <img class="loaf__dark" src="media/s1/ig-007-dark.webp" width="1434" height="960" alt="" decoding="async">
+            <img class="loaf__lit" src="media/s1/ig-007-lit.webp" width="1434" height="960" alt="Leaf-scored round loaf, dark moody background, warm side light, flour dusted" decoding="async">
+            <span class="loaf__glow" aria-hidden="true"></span>
+          </div>
+          <figcaption class="loaf__cap"><span class="loaf__name">Leaf</span><span class="loaf__line">A leaf, cut in one breath.</span></figcaption>
+        </figure>
+        <figure class="loaf loaf--mandala" data-loaf="1">
+          <div class="loaf__plate">
+            <img class="loaf__dark" src="media/s1/ig-127-dark.webp" width="1439" height="960" alt="" loading="lazy" decoding="async">
+            <img class="loaf__lit" src="media/s1/ig-127-lit.webp" width="1439" height="960" alt="Mandala-scored boule on wood board with black vase" loading="lazy" decoding="async">
+            <span class="loaf__glow" aria-hidden="true"></span>
+          </div>
+          <figcaption class="loaf__cap"><span class="loaf__name">Mandala</span><span class="loaf__line">A mandala, ring by ring.</span></figcaption>
+        </figure>
+        <figure class="loaf loaf--star" data-loaf="2">
+          <div class="loaf__plate">
+            <img class="loaf__dark" src="media/s1/ig-216-dark.webp" width="1408" height="1760" alt="" loading="lazy" decoding="async">
+            <img class="loaf__lit" src="media/s1/ig-216-lit.webp" width="1408" height="1760" alt="Star-scored loaf with holly and berries" loading="lazy" decoding="async">
+            <span class="loaf__glow" aria-hidden="true"></span>
+          </div>
+          <figcaption class="loaf__cap"><span class="loaf__name">Star</span><span class="loaf__line">A star, for the holidays.</span></figcaption>
+        </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="slash" aria-hidden="true">
+    <svg class="slash__defs" width="0" height="0" focusable="false"><clipPath id="slash-clip" clipPathUnits="objectBoundingBox"><path class="slash__path" d="M0.08,0.52 C0.30,0.50 0.62,0.48 0.92,0.46 C0.62,0.48 0.30,0.50 0.08,0.52 Z"/></clipPath></svg>
+    <div class="slash__frame"><img class="slash__img" src="media/s1/ig-046.webp" width="1440" height="960" alt="" loading="lazy" decoding="async"></div>
+  </div>
+
+  <section id="s2" class="process" data-chapter="S2" aria-labelledby="s2-lead">
+    <div class="process__run">
+      <div class="process__head">
+        <div class="wrap">
+          <p class="kicker">Starter to oven</p>
+          <h2 id="s2-lead" class="process__title" data-lead="S2"><span class="line"><span class="line__in">Real sourdough</span></span> <span class="line"><span class="line__in">takes its time.</span></span></h2>
+        </div>
+      </div>
+      <p class="wrap process__lede">Starter, shape, score, bake. Here is how a loaf comes together in Tiana’s kitchen.</p>
+      <ol class="steps wrap">
+          <li class="step step--1" data-step="1">
+            <span class="step__num" aria-hidden="true">01</span>
+            <figure class="step__media"><img src="media/s2/ig-228.webp" width="1440" height="1440" alt="Sourdough starter jar, bubbly, dark granite counter" loading="lazy" decoding="async"></figure>
+            <div class="step__text">
+              <h3 class="step__title">Starter</h3>
+              <p>It starts with a jar of bubbly sourdough starter, fed and waiting.</p>
+            </div>
+          </li>
+          <li class="step step--2" data-step="2">
+            <span class="step__num" aria-hidden="true">02</span>
+            <figure class="step__media"><img src="media/s2/index-process-hands-1.webp" width="1152" height="864" alt="Floured hands shaping a round of sourdough dough" loading="lazy" decoding="async" data-placeholder="image"></figure>
+            <div class="step__text">
+              <h3 class="step__title">Shape</h3>
+              <p>The dough is folded and shaped into a round by hand.</p>
+            </div>
+          </li>
+          <li class="step step--3" data-step="3">
+            <span class="step__num" aria-hidden="true">03</span>
+            <figure class="step__media"><img src="media/s2/index-process-scoring-1.webp" width="1152" height="864" alt="A blade cutting a curved score into a floured dough round" loading="lazy" decoding="async" data-placeholder="image"></figure>
+            <div class="step__text">
+              <h3 class="step__title">Score</h3>
+              <p>A blade cuts the pattern, so the loaf opens where it should.</p>
+            </div>
+          </li>
+          <li class="step step--4" data-step="4">
+            <span class="step__num" aria-hidden="true">04</span>
+            <figure class="step__media bake" data-signature="bake-displace" data-tier="2">
+              <img class="bake__oven" src="media/s2/index-process-oven-1.webp" width="1152" height="864" alt="A loaf baking in a glowing oven, the score bursting open" loading="lazy" decoding="async" data-placeholder="image">
+              <svg class="bake__svg" viewBox="0 0 1200 1500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Star-scored dough turning into a baked golden loaf">
+                <defs>
+                  <filter id="bake-rough" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7"/>
+                    <feDisplacementMap in="SourceGraphic" scale="140"/>
+                  </filter>
+                  <mask id="bake-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="1500">
+                    <rect width="1200" height="1500" fill="#fff"/>
+                    <circle class="bake__hole" cx="600" cy="740" r="0" fill="#000" filter="url(#bake-rough)"/>
+                  </mask>
+                </defs>
+                <image class="bake__loaf" href="media/s2/ig-212.webp" x="0" y="0" width="1200" height="1500" preserveAspectRatio="xMidYMid slice"/>
+                <image class="bake__dough" href="media/s2/ig-221.webp" x="0" y="0" width="1200" height="1500" preserveAspectRatio="xMidYMid slice" mask="url(#bake-mask)"/>
+              </svg>
+              <span class="bake__bloom" aria-hidden="true"></span>
+            </figure>
+            <div class="step__text">
+              <h3 class="step__title">Bake</h3>
+              <p>Into a hot oven. The score bursts open and the crust turns gold.</p>
+            </div>
+          </li>
+          <li class="step step--5" data-step="5">
+            <span class="step__num" aria-hidden="true">05</span>
+            <figure class="step__media"><img src="media/s2/ig-054.webp" width="1440" height="960" alt="Leaf-scored loaves on rack, strong warm directional light, dark background" loading="lazy" decoding="async"></figure>
+            <div class="step__text">
+              <h3 class="step__title">Cool</h3>
+              <p>Out of the oven and onto the rack to cool before it’s bagged.</p>
+            </div>
+          </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="s3" class="flavours" data-chapter="S3" aria-labelledby="s3-lead">
+    <div class="flavours__run">
+    <div class="flavours__head">
+      <div class="wrap">
+        <p class="kicker">So many flavours</p>
+        <h2 id="s3-lead" class="flavours__title" data-lead="S3"><span class="line"><span class="line__in">Sweet to savoury,</span></span> <span class="line"><span class="line__in">a loaf for everyone.</span></span></h2>
+      </div>
+    </div>
+    <div class="collage" data-signature="velocity-depth-collage" data-tier="3">
+      <p class="collage__word collage__word--1" aria-hidden="true">Sweet</p>
+      <p class="collage__word collage__word--2" aria-hidden="true">Savoury</p>
+      <p class="collage__word collage__word--3" aria-hidden="true">Seasonal</p>
+          <figure class="piece pc-0" data-depth="0.1" data-piece="0"><img src="media/s3/ig-066.webp" width="1440" height="958" alt="Dark chocolate loaf with leaf-score, red berries and greenery" loading="lazy" decoding="async"><figcaption class="piece__cap">Chocolate</figcaption></figure>
+          <figure class="piece piece--far pc-1" data-depth="0.9" data-piece="1"><img src="media/rain-far/ig-012-far.webp" width="1440" height="960" alt="" loading="lazy" decoding="async"></figure>
+          <figure class="piece pc-2" data-depth="0.3" data-piece="2"><img src="media/s3/ig-202.webp" width="1080" height="1350" alt="Dark chocolate loaf with white star scoring on board, dried palm vase" loading="lazy" decoding="async"><figcaption class="piece__cap">Chocolate</figcaption></figure>
+          <figure class="piece pc-3" data-depth="0.55" data-piece="3"><img src="media/s3/ig-084.webp" width="1440" height="958" alt="Cinnamon-swirl loaf sliced with eucalyptus greenery" loading="lazy" decoding="async"><figcaption class="piece__cap">Cinnamon swirl</figcaption></figure>
+          <figure class="piece pc-4" data-depth="0.4" data-piece="4"><img src="media/s3/ig-003.webp" width="1440" height="960" alt="Close-up glazed cinnamon rolls with icing drizzle" loading="lazy" decoding="async"><figcaption class="piece__cap">Cinnamon rolls</figcaption></figure>
+          <figure class="piece piece--far pc-5" data-depth="0.85" data-piece="5"><img src="media/rain-far/ig-141-far.webp" width="1440" height="960" alt="" loading="lazy" decoding="async"></figure>
+          <figure class="piece pc-6" data-depth="0.05" data-piece="6"><img src="media/s3/ig-022.webp" width="1440" height="958" alt="Jalapeño-cheese loaf on wooden board" loading="lazy" decoding="async"><figcaption class="piece__cap">Jalapeño cheese</figcaption></figure>
+          <figure class="piece pc-7" data-depth="0.45" data-piece="7"><img src="media/s3/ig-144.webp" width="1440" height="958" alt="Jalapeño-cheese loaf on rack" loading="lazy" decoding="async"><figcaption class="piece__cap">Jalapeño cheese</figcaption></figure>
+          <figure class="piece pc-8" data-depth="0.2" data-piece="8"><img src="media/s3/ig-116.webp" width="960" height="1201" alt="Halved blueberry loaf cross-section with baby&#x27;s breath vase" loading="lazy" decoding="async"><figcaption class="piece__cap">Blueberry</figcaption></figure>
+          <figure class="piece piece--far pc-9" data-depth="0.95" data-piece="9"><img src="media/rain-far/ig-204-far.webp" width="1440" height="957" alt="" loading="lazy" decoding="async"></figure>
+          <figure class="piece pc-10" data-depth="0.35" data-piece="10"><img src="media/s3/ig-053.webp" width="1440" height="960" alt="Sliced pink-red cranberry loaf with greenery" loading="lazy" decoding="async"><figcaption class="piece__cap">Cranberry</figcaption></figure>
+          <figure class="piece pc-11" data-depth="0.15" data-piece="11"><img src="media/s3/ig-179.webp" width="1080" height="1350" alt="Pink beet loaf sliced on board with vase and green cloth" loading="lazy" decoding="async"><figcaption class="piece__cap">Beet</figcaption></figure>
+          <figure class="piece pc-12" data-depth="0.5" data-piece="12"><img src="media/s3/ig-077.webp" width="1440" height="958" alt="Pumpkin-scored loaf on board with rust fabric" loading="lazy" decoding="async"><figcaption class="piece__cap">Pumpkin</figcaption></figure>
+          <figure class="piece pc-13" data-depth="0.25" data-piece="13"><img src="media/s3/ig-005.webp" width="1080" height="1350" alt="Angled tray of iced pumpkin cinnamon rolls, grey backdrop" loading="lazy" decoding="async"><figcaption class="piece__cap">Cinnamon rolls</figcaption></figure>
+          <figure class="piece pc-14" data-depth="0.08" data-piece="14"><img src="media/s3/ig-080.webp" width="1440" height="958" alt="Pumpkin-scored loaf with autumn roses and rust fabric" loading="lazy" decoding="async"><figcaption class="piece__cap">Pumpkin</figcaption></figure>
+          <figure class="piece piece--slot pc-15" data-depth="0.12" data-piece="15"><img src="media/s2/ig-212.webp" width="1536" height="1536" alt="Overhead star-scored golden loaf on dark rack, flash lighting" loading="lazy" decoding="async"></figure>
+    </div>
+    </div>
+    <div class="wrap menu">
+      <h3 class="menu__title">On the menu</h3>
+      <ul class="menu__list">
+            <li class="flavour" data-flavour="0"><span class="flavour__name">Chocolate</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+            <li class="flavour" data-flavour="1"><span class="flavour__name">Jalapeño cheese</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+            <li class="flavour" data-flavour="2"><span class="flavour__name">Blueberry</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+            <li class="flavour" data-flavour="3"><span class="flavour__name">Cinnamon swirl</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+            <li class="flavour" data-flavour="4"><span class="flavour__name">Cinnamon rolls</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+            <li class="flavour" data-flavour="5"><span class="flavour__name">Pumpkin</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+            <li class="flavour" data-flavour="6"><span class="flavour__name">Cranberry</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+            <li class="flavour" data-flavour="7"><span class="flavour__name">Beet</span><span class="flavour__price" data-placeholder="price">$— CAD</span></li>
+      </ul>
+      <p class="menu__note">Flavours change with the season. Ask Tiana what’s baking this week.</p>
+    </div>
+    <div class="crumb" data-hold="0.6">
+      <div class="crumb__frame">
+        <picture class="crumb__pic">
+          <source media="(min-width: 900px)" srcset="media/s3/index-flavours-crumb-1.webp" width="1280" height="720">
+          <img class="crumb__img" src="media/s3/ig-044.webp" width="1080" height="1350" alt="The open crumb of a halved blueberry loaf" loading="lazy" decoding="async">
+        </picture>
+        <svg class="crumb__defs" width="0" height="0" focusable="false"><clipPath id="iris-out" clipPathUnits="objectBoundingBox"><ellipse class="iris-out" cx="0.5" cy="0.5" rx="0.75" ry="0.75"/></clipPath></svg>
+        <p class="crumb__line"><span class="line"><span class="line__in">It’s what’s inside.</span></span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="s4" class="howto" data-chapter="S4" aria-labelledby="s4-lead">
+    <div class="howto__pin">
+      <div class="howto__inner wrap">
+        <div class="howto__text">
+          <p class="kicker">How to get one</p>
+          <h2 id="s4-lead" class="howto__title" data-lead="S4"><span class="line"><span class="line__in">Getting one</span></span> <span class="line"><span class="line__in">is easy.</span></span></h2>
+          <ol class="ostep-list">
+            <li class="ostep" data-order-step="0"><span class="ostep__n">1</span><div><h3 class="ostep__title">Send a message</h3><p>Message Tiana on Facebook or Instagram, or send an email with what you’d like.</p></div></li>
+            <li class="ostep" data-order-step="1"><span class="ostep__n">2</span><div><h3 class="ostep__title">Tiana bakes it</h3><p>Your loaf is made by hand, from starter to scoring to oven.</p></div></li>
+            <li class="ostep" data-order-step="2"><span class="ostep__n">3</span><div><h3 class="ostep__title">Delivery or curbside pickup</h3><p>Have it delivered, or pick it up curbside in Fort Saskatchewan.</p></div></li>
+          </ol>
+          <div class="howto__rail" aria-hidden="true"><span class="howto__rail-fill"></span></div>
+          <p class="howto__price">Loaves <span data-placeholder="price">from $XX CAD</span></p>
+          <div class="howto__actions" data-cta="S4">
+            <a class="btn" href="mailto:order@example.com" data-placeholder="order-email">Start an order</a>
+            <a class="howto__reviews" href="https://www.facebook.com/people/Sweet-Sour/61569551711149/" rel="noopener">100% recommend · 13 Facebook reviews</a>
+          </div>
+        </div>
+        <div class="howto__stage" data-signature="rank-restack-bags" data-tier="2">
+          <svg class="howto__defs" width="0" height="0" focusable="false"><clipPath id="iris-in" clipPathUnits="objectBoundingBox"><ellipse class="iris-in" cx="0.5" cy="0.5" rx="0.75" ry="0.75"/></clipPath></svg>
+          <div class="bags">
+            <figure class="bag bag-0" data-bag="0"><img src="media/s4/lg-b4-33-1.webp" width="2048" height="1365" alt="Logo card beside loaf" loading="lazy" decoding="async"></figure>
+            <figure class="bag bag-1" data-bag="1"><img src="media/s4/lg-b4-26-1.webp" width="1080" height="1350" alt="Branded bag and card with logo visible" loading="lazy" decoding="async"></figure>
+            <figure class="bag bag-2" data-bag="2"><img src="media/s4/lg-b3-27-1.webp" width="1440" height="960" alt="Basket of bagged loaves, branded bag label and logo visible" loading="lazy" decoding="async"></figure>
+          </div>
+          <button class="bags__next" type="button">Next bag</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="flood" aria-hidden="true">
+    <svg class="flood__svg" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path class="flood__path" d="M0,100 C20,100 30,100 50,100 C70,100 80,100 100,100 L100,100 L0,100 Z"/></svg>
+  </div>
+
+  <section id="l" class="landing" data-chapter="L" aria-labelledby="l-lead">
+    <div class="feed" data-signature="physics-settle-row" data-tier="3">
+      <ul class="feed__row" aria-label="Recent loaves on Instagram">
+          <li class="tile" data-tile="0"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DceEhJaFH6r/" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-017.webp" width="1440" height="960" alt="Leaf-scored loaf on rack, bright white kitchen" loading="lazy" decoding="async"></a></li>
+          <li class="tile" data-tile="1"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DVWapntDba7/" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-051.webp" width="1440" height="958" alt="Leaf-scored golden boule on wooden board, warm" loading="lazy" decoding="async"></a></li>
+          <li class="tile" data-tile="2"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DN3zPom3rxr/" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-085.webp" width="1440" height="960" alt="Close-up leaf-scored golden boule, cream backdrop" loading="lazy" decoding="async"></a></li>
+          <li class="tile" data-tile="3"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DExtfelKHwv/?img_index=2" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-197.webp" width="1440" height="957" alt="Flower-scored boule on wood board, warm cream backdrop" loading="lazy" decoding="async"></a></li>
+          <li class="tile" data-tile="4"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DQhUdiGE_9v/" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-071.webp" width="1440" height="958" alt="Scored boule on board with cream flowers" loading="lazy" decoding="async"></a></li>
+          <li class="tile" data-tile="5"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DLap-LrtELg/" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-099.webp" width="1440" height="960" alt="Two golden scored loaves on rack with baby&#x27;s breath" loading="lazy" decoding="async"></a></li>
+          <li class="tile" data-tile="6"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DH6KjnlufT-/" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-134.webp" width="960" height="1200" alt="Three golden scored loaves on rack" loading="lazy" decoding="async"></a></li>
+          <li class="tile" data-tile="7"><a class="tile__link" href="https://www.instagram.com/sweetandsour.baker/p/DUOUfCgEmUk/?img_index=2" rel="noopener" aria-label="See this loaf on Instagram"><img src="media/feed/ig-056.webp" width="1440" height="958" alt="Heart-scored loaf with red accents on board, greenery" loading="lazy" decoding="async"></a></li>
+      </ul>
+    </div>
+    <div class="wrap landing__head">
+      <div class="landing__intro">
+        <p class="kicker">Come say hi</p>
+        <h2 id="l-lead" class="landing__title" data-lead="L"><span class="line"><span class="line__in">Why helloooo,</span></span> <span class="line"><span class="line__in"><em>let’s bake.</em></span></span></h2>
+        <p class="landing__lede">The good stuff is one message away.</p>
+      </div>
+      <div class="landing__aside">
+        <div class="landing__cta" data-cta="L">
+          <a class="btn btn--big" href="mailto:order@example.com" data-placeholder="order-email">Email an order</a>
+          <a class="btn btn--ghost" href="about.html">Meet Tiana</a>
+        </div>
+        <ul class="dest">
+          <li class="dest__item dest__item--ig"><a href="https://www.instagram.com/sweetandsour.baker/" rel="noopener"><span class="dest__k">Instagram</span><span class="dest__v">@sweetandsour.baker</span></a></li>
+          <li class="dest__item dest__item--fb"><a href="https://www.facebook.com/people/Sweet-Sour/61569551711149/" rel="noopener"><span class="dest__k">Facebook</span><span class="dest__v">Sweet &amp; Sour</span></a></li>
+          <li class="dest__item dest__item--lt"><a href="https://linktr.ee/Sweet_and_Sour" rel="noopener"><span class="dest__k">Linktree</span><span class="dest__v">All the links</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p class="site-footer__brand">Sweet <span class="brand__amp">&amp;</span> Sour</p>
+    <p class="site-footer__line"><span class="slash-underline">Made by Tiana</span> · Fort Saskatchewan, AB</p>
+    <p class="site-footer__line">Sweet prices, homemade sourdough. Delivery and curbside pickup.</p>
+  </div>
+</footer>
+</body>
+</html>

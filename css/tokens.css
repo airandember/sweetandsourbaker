@@ -1,0 +1,9 @@
+/* Sweet & Sour tokens (BRAND-SHEET.md, B1-lock) */
+:root{
+  --banneton:#110c09; --proofing:#1d1510; --flour:#f2e9da; --ash:#a99886; --crust:#8c5b36; --sage:#aeb68e;
+  --oven:#e9a65e;
+  --font-display:"Fraunces", Georgia, serif;
+  --font-ui:"Instrument Sans", system-ui, sans-serif;
+  --wrap:95vw; --measure:36em;
+  --ease-io:cubic-bezier(.65,0,.35,1);
+}
